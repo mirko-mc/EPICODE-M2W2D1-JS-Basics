@@ -8,11 +8,9 @@
 console.log("----- ESERCIZIO 1 -----\n");
 let num1 = parseInt(prompt("ESERCIZIO 1 - inserisci un numero"));
 let num2 = parseInt(prompt("ESERCIZIO 1 - inserisci un numero"));
-if (num1 > num2) {
-    console.log(`${num1} è più grande di ${num2}\n`);
-} else {
-    console.log(`${num2} è più grande di ${num1}\n`);
-}
+if (num1 === num2) console.log(`${num1} e ${num2} sono uguali`);
+else if (num1 > num2) console.log(`${num1} è più grande di ${num2}\n`);
+else console.log(`${num2} è più grande di ${num1}\n`);
 console.log("-----------------------\n");
 /*
 ESERCIZIO 2
@@ -27,7 +25,28 @@ ESERCIZIO 2
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 console.log("----- ESERCIZIO 2 -----\n");
-let num = parseInt(prompt("inserisci un numero"));
+let num = parseInt(prompt("ESERCIZIO 2 - inserisci un numero"));
+switch (num) {
+    case num < 5:
+        console.log("Tiny");
+        break;
+    case num < 10:
+        console.log("Small");
+        break;
+    case num < 15:
+        console.log("Medium");
+        break;
+    case num < 20:
+        console.log("Large");
+        break;
+
+    case num >= 20:
+        console.log("Huge");
+        break;
+    default:
+        break;
+}
+/*
 if (num >= 20) {
     console.log("Huge");
 } else if (num < 20) {
@@ -39,6 +58,7 @@ if (num >= 20) {
 } else if (num < 5) {
     console.log("Tiny");
 }
+*/
 console.log("-----------------------\n");
 
 //ESERCIZI SUI CICLI:
@@ -64,7 +84,7 @@ for (let i = 0; i <= 15; i++) {
     if (num % 2 === 0) console.log(`il numero ${num} è pari`);
     if (num % 2 !== 0) console.log(`il numero ${num} è dispari`);
 }
-console.log("-----------------------\n");
+console.log("------------------------\n");
 //ESERCIZI EXTRA NON OBBLIGATORI
 
 /* ESERCIZIO EXTRA 1
@@ -72,8 +92,9 @@ console.log("-----------------------\n");
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-num1 = parseInt(prompt("inserisci un numero"));
-num2 = parseInt(prompt("inserisci un numero"));
+console.log("----- ESERCIZIO EXTRA 1 -----\n");
+num1 = parseInt(prompt("ESERCIZIO EXTRA 1 - inserisci un numero"));
+num2 = parseInt(prompt("ESERCIZIO EXTRA 1 - inserisci un numero"));
 // meglio usare switch case
 if (num1 || num2 === 8) {
     console.log("uno dei due numeri vale 8");
@@ -85,6 +106,7 @@ if ((num1 + num2 === 8 || num1 - num2 === 8)) {
 } else {
     console.log("la loro addizione/sottrazione non restituisce 8 come risultato");
 }
+console.log("-----------------------------\n");
 /* ESERCIZIO EXTRA 2
 Stai lavorando su un sito di e-commerce. Stai salvando il saldo totale del carrello dell'utente in una variabile "totalShoppingCart".
 C'è una promozione in corso: se il totale del carrello supera 50, l'utente ha diritto alla spedizione gratuita (altrimenti la spedizione ha un costo fisso pari a 10).
@@ -92,14 +114,16 @@ Crea un algoritmo che determini l'ammontare totale che deve essere addebitato al
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-
+console.log("----- ESERCIZIO EXTRA 2 -----\n");
+console.log("-----------------------------\n");
 /* ESERCIZIO EXTRA 3
   Oggi è il Black Friday e viene applicato il 20% su ogni prodotto.
   Modifica la risposta precedente includendo questa nuova promozione nell'algoritmo, determinando, usando l'algoritmo del codice precedente, se le spedizioni siano gratuite oppure no e e calcolando il totale.
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-
+console.log("----- ESERCIZIO EXTRA 3 -----\n");
+console.log("-----------------------------\n");
 /*  ESERCIZIO EXTRA 4
   Usa un operatore ternaio per assegnare ad una variabile chiamata "gender" i valori "male" o "female".
   La scelta deve essere basata sul valore di un'altra variabile booleana chiamata isMale.
@@ -107,7 +131,19 @@ Crea un algoritmo che determini l'ammontare totale che deve essere addebitato al
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-
+console.log("----- ESERCIZIO EXTRA 4 -----\n");
+console.log("-----------------------------\n");
 /* ESERCIZIO EXTRA 5
   Scrivi un algoritmo che iteri i numeri da 1 a 100, stampandoli in console. Se un valore tuttavia è multiplo di 3 (operatore modulo!), stampa al suo posto la parola "Fizz" e se il numero è multiplo di 5, stampa "Buzz". Se le condizioni si verificano entrambe, stampa "FizzBuzz".
 */
+
+/* SCRIVI QUI LA TUA RISPOSTA */
+console.log("----- ESERCIZIO EXTRA 5 -----\n");
+let i = 1
+while (i <= 100) {
+    if (i % 3 === 0) console.log("Fizz")
+    else if (i % 5 === 0) console.log("Buzz")
+    else (console.log(i));
+    i++;
+}
+console.log("-----------------------------\n");
